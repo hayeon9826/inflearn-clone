@@ -17,9 +17,7 @@ const showCourse = async () => {
 };
 
 const displayCourse = (response) => {
-  console.log(response);
   const { course } = response.data;
-  console.log(course);
 
   const img = document.querySelector(".course_show_img");
   const title = document.querySelector(".course_show_title");

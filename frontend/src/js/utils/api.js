@@ -25,3 +25,18 @@ export const getCourse = async (id) => {
     console.log(e.message);
   }
 };
+
+export const getSearch = async (value) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/api/search/courses?keyword=${value}&max=20`
+    );
+    if (response.ok) {
+      const json = await response.json();
+      return json;
+    }
+    throw new Error("API 호출 실패");
+  } catch (e) {
+    console.log(e.message);
+  }
+};

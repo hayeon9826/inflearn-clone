@@ -33,6 +33,9 @@
             </span>
           </button>
         </div>
+        <div class="search_result" style="display: none">
+          <ul class="search_result_list"></ul>
+        </div>
         <div class="hashtag_div">
           <span class="hashtag">#Front-End</span>
           <span class="hashtag">#React</span>
@@ -48,6 +51,27 @@
           <li class="course_end"></li>
         </ul>
         <div class="loader"></div>
+      </div>
+      <div class="modal hidden">
+        <div class="modal__background"></div>
+        <div class="modal__content">
+          <h3>강의 추가</h3>
+          <form class="course_create_form">
+            <label for="text" class="form_label"> 강의 제목</label>
+            <input
+              type="text"
+              class="course_title_input"
+              placeholder="강의 제목 입력"
+            />
+            <label for="number" class="form_label"> 강의 가격</label>
+            <input
+              type="number"
+              class="course_title_price"
+              placeholder="강의 가격 입력"
+            />
+            <button class="modal_submit">확인</button>
+          </form>
+        </div>
       </div>
       <div class="float">강의 추가 <i class="las la-plus"></i></div>
     </div>
