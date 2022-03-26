@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
+    "dev": "nodemon ./frontend/server.js",
     "test": "jest --watch"
   },
   "dependencies": {
