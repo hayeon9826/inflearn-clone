@@ -1,7 +1,6 @@
 import { getCourseList } from "../utils/api.js";
 
 export const showCourses = (data) => {
-  console.log("api called!!");
   const { courses } = data;
   const loader = document.querySelector(".loader");
   const last = document.querySelector(".course_end");
@@ -58,7 +57,6 @@ class Observer {
           this.page++;
 
           if (this.courseLength >= 20) {
-            console.log("length > 20");
             const courses = await getCourseList(this.page);
             if (courses && courses.ok) {
               showCourses(courses.data);

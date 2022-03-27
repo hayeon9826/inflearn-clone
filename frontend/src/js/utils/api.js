@@ -40,3 +40,19 @@ export const getSearch = async (value) => {
     console.log(e.message);
   }
 };
+
+export const createCourse = async (data) => {
+  try {
+    const response = await fetch(`http://localhost:3000/api/courses`, {
+      method: "post",
+      body: data,
+    });
+    if (response.ok) {
+      const json = await response.json();
+      return json;
+    }
+    throw new Error("API 호출 실패");
+  } catch (e) {
+    console.log(e.message);
+  }
+};

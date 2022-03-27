@@ -7,6 +7,11 @@
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>강의 리스트</title>
   </head>
@@ -56,17 +61,24 @@
         <div class="modal__background"></div>
         <div class="modal__content">
           <h3>강의 추가</h3>
-          <form class="course_create_form">
-            <label for="text" class="form_label"> 강의 제목</label>
-            <input
-              type="text"
-              class="course_title_input"
-              placeholder="강의 제목 입력"
-            />
+          <form action="courses" class="course_create_form" method="POST">
+            <div>
+              <label for="text" class="form_label"> 강의 제목</label>
+              <input
+                type="text"
+                id="title_input"
+                class="course_title_input"
+                placeholder="강의 제목 입력"
+                name="title"
+              />
+            </div>
+
             <label for="number" class="form_label"> 강의 가격</label>
             <input
               type="number"
-              class="course_title_price"
+              id="price_input"
+              class="course_price_input"
+              name="price"
               placeholder="강의 가격 입력"
             />
             <button class="modal_submit">확인</button>
@@ -77,5 +89,9 @@
     </div>
 
     <script type="module" src="./js/app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

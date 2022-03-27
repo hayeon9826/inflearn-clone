@@ -618,6 +618,12 @@ div._2ix0 {
   position: absolute;
 }
 
+@media (max-width: 768px) {
+  .modal__content {
+    width: 80% !important;
+  }
+}
+
 .modal__content {
   position: relative;
   background-color: white;
@@ -631,11 +637,17 @@ div._2ix0 {
   display: none;
 }
 
+.course_create_form {
+  padding: 8px;
+}
+
 .course_create_form input {
   font-size: 16px;
   line-height: 28px;
   width: 100%;
   min-height: 36px;
+  padding: 4px 8px;
+  box-sizing: border-box;
   border: 1px solid rgb(223, 223, 223);
   border-radius: 4px;
   margin-bottom: 25px;

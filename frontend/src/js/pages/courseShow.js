@@ -3,13 +3,11 @@ import { showCourses } from "../utils/course.js";
 
 const getId = () => {
   const courseId = window.location.pathname.split("/")[2];
-  console.log(courseId);
   return parseInt(courseId);
 };
 
 const showCourse = async () => {
   const id = getId();
-  console.log(id);
   const course = await getCourse(id);
   if (course && course.ok) {
     displayCourse(course);
