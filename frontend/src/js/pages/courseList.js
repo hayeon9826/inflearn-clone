@@ -12,7 +12,6 @@ export const search = () => {
   searchInput.addEventListener("keydown", handleInput);
   searchInput.addEventListener("focus", handleInput);
   searchInput.addEventListener("focusout", (e) => {
-    // console.log(e.relatedTarget?.className);
     if (!e?.relatedTarget) {
       searchResult.style.display = "none";
       searchInput.classList.remove("search_active");
