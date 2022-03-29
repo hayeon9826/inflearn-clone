@@ -9,9 +9,9 @@ import { showCourses } from "../utils/course.js";
 export const search = () => {
   const searchInput = document.querySelector(".search_input");
   const searchResult = document.querySelector(".search_result");
-  searchInput.addEventListener("keydown", handleInput);
+  searchInput.addEventListener("input", handleInput);
   searchInput.addEventListener("focus", handleInput);
-  searchInput.addEventListener("focusout", (e) => {
+  searchInput.addEventListener("blur", (e) => {
     if (!e?.relatedTarget) {
       searchResult.style.display = "none";
       searchInput.classList.remove("search_active");

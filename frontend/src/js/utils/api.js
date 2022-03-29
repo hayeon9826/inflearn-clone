@@ -1,3 +1,4 @@
+// 전체 강의 리스트 호출
 export const getCourseList = async (page = 1) => {
   try {
     const response = await fetch(
@@ -13,6 +14,7 @@ export const getCourseList = async (page = 1) => {
   }
 };
 
+// 상세 강의 호출
 export const getCourse = async (id) => {
   try {
     const response = await fetch(`http://localhost:3000/api/courses/${id}`);
@@ -26,6 +28,7 @@ export const getCourse = async (id) => {
   }
 };
 
+// 검색 결과 호출
 export const getSearch = async (value) => {
   try {
     const response = await fetch(
@@ -41,6 +44,7 @@ export const getSearch = async (value) => {
   }
 };
 
+// 강의 생성 api 호출
 export const createCourse = async (data) => {
   try {
     const response = await fetch(`http://localhost:3000/api/courses`, {

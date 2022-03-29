@@ -16,6 +16,7 @@
     <title>강의 리스트</title>
   </head>
   <body>
+    <!-- 헤더 -->
     <div class="header">
       <img
         class="logo"
@@ -26,6 +27,7 @@
     <div class="main">
       <div class="search_div">
         <div class="title">배우고, 나누고, 성장하세요</div>
+        <!-- 검색바 -->
         <div class="search_form">
           <input
             type="text"
@@ -38,6 +40,7 @@
             </span>
           </button>
         </div>
+        <!-- 검색 결과 -->
         <div class="search_result" style="display: none">
           <ul class="search_result_list"></ul>
         </div>
@@ -50,13 +53,14 @@
           <span class="hashtag">#Node.js</span>
         </div>
       </div>
-
+      <!-- 강의 리스트 -->
       <div class="course">
         <ul class="course_list">
           <li class="course_end"></li>
         </ul>
         <div class="loader"></div>
       </div>
+      <!-- 모달 (오픈시에 노출) -->
       <div class="modal hidden">
         <div class="modal__background"></div>
         <div class="modal__content">
@@ -85,10 +89,12 @@
           </form>
         </div>
       </div>
+      <!-- 강의 추가 버튼 -->
       <div class="float">강의 추가 <i class="las la-plus"></i></div>
     </div>
 
     <script type="module" src="./js/app.js"></script>
+    <!-- 모달에서 toast 사용 라이브러리 -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
